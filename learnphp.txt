@@ -1,0 +1,14 @@
+# LearnPHP
+
+Lernmodul zum Lernen von PHP
+
+
+## Lernplan
+
+### Kapitel 1
+
+Überblick über PHP, was es ist, woher es kommt, wer es verwendet. Sollte wohl entweder ein Film sein oder eine Audiodatei, die mit feschen Animationen unterlagert sind.
+
+### Kapitel 2
+
+Wie kann eine PHP-Datei aussehen? Variablen. Sprachkonstrukte
