@@ -12,3 +12,7 @@ Lernmodul zum Lernen von PHP
 ### Kapitel 2
 
 Wie kann eine PHP-Datei aussehen? Variablen. Sprachkonstrukte
+
+### Kapitel 3
+
+Übung 1: baue eine

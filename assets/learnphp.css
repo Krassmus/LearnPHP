@@ -6,12 +6,23 @@ body {
 h1 {
     margin-top: 0px;
 }
-textarea {
-    display: block;
+
+#sourcecode {
     width: calc(100% - 20px);
     min-height: 100px;
     margin: 10px;
 }
+
+.outputs {
+    display: flex;
+}
+.outputs > * {
+    width: calc(50% - 20px);
+    min-height: 100px;
+    margin: 10px;
+    border: thin solid grey;
+}
+
 
 #success {
     display: none;

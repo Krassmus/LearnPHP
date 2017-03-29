@@ -17,6 +17,7 @@
                     options.filesystem = new PHP.Adapters.XHRFileSystem();
                     var engine = new PHP (document.getElementById("sourcecode").value);
                     document.getElementById("output").value = engine.vm.OUTPUT_BUFFER;
+                    document.getElementById("html_page").setAttribute("src", "data:text/html;base64," + btoa(engine.vm.OUTPUT_BUFFER));
                     //validate:
                     if (document.getElementById("sourcecode").value.length < 100 && engine.vm.OUTPUT_BUFFER.length > 100) {
                         document.getElementById("success").style.display = "block";
@@ -33,11 +34,21 @@
             In HTML schreibt man oft Code, der sich wiederholt. PHP kann einem da die Arbeit abnehmen, wenn man mit Variablen arbeitet. Erzeugen Sie mit PHP eine Liste mit exakt 100 unterschiedlichen Einträgen in weniger als 100 Zeichen Quelltext.
         </div>
 
-        <textarea id="sourcecode">&lt;? echo "yeah"; </textarea>
+        <textarea id="sourcecode">
+&lt;!doctype html&gt;
+&lt;html&gt;
+&lt;h1&gt;&lt;? echo "yeah"; ?&gt;</h1&gt;
+Hallo Welt!
+&lt;/html&gt;
+</textarea>
 
         <button onClick="LearnPHP.run();">Run PHP Code</button>
 
-        <textarea placeholder="PHP Output" id="output"></textarea>
+        <div class="outputs">
+            <textarea placeholder="PHP Output" id="output"></textarea>
+
+            <iframe id="html_page" src=""></iframe>
+        </div>
 
         <div id="success">Aufgabe erledigt. Juhu!</div>
 
